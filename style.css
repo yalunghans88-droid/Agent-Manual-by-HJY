@@ -1,43 +1,45 @@
-/* ===== RESET ===== */
+/* ====== GLOBAL STYLES ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #000;
-  color: white;
-  font-family: "Georgia", serif;
-  line-height: 1.6;
+  background-color: #0b0c10;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
-/* ===== NAVBAR ===== */
+/* ====== NAVBAR ====== */
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background: #0b0b0b;
+  height: 70px;
+  background: #1a0000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  z-index: 100;
-  transition: background 0.3s ease;
+  padding: 0 60px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255, 0, 0, 0.3);
+  border-bottom: 2px solid #ff2b2b;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
 }
 
 .logo-icon {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
 }
 
 .nav-links {
@@ -46,151 +48,1375 @@ body {
 }
 
 .nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-  background: #ff0000;
-  transform: scale(1.1);
-}
-
-.nav-links a.active {
-  background: #ff0000;
-}
-
-/* ===== HERO ===== */
-.hero {
-  margin-top: 70px;
-  height: 70vh;
-  background: url('#') center/cover no-repeat; /* Replace with your hero image */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   position: relative;
+  text-decoration: none;
+  color: #f2f2f2;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff2b2b;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff4d4d;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
 }
 
 .hero-overlay h1 {
-  font-size: 2.8rem;
-  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .hero-overlay p {
-  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #c5c6c7;
+}
+
+/* ====== INTRO SECTION ====== */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 10%;
+  background-color: #0b0c10;
+}
+
+.animation-image {
+  width: 600px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.intro p {
+  max-width: 800px;
+  font-size: 1.1rem;
+  color: #c5c6c7;
+  line-height: 1.8;
+}
+
+/* ====== INFO SECTION ====== */
+.info {
+  width: 100%;
+  background-color: #1f2833;
+  text-align: center;
+  padding: 70px 0;
+}
+
+.info img {
+  width: 70%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== TIPS SECTION ====== */
+.tips {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #0b0c10;
+}
+
+.tips-text {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.video-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #66fcf1;
+}
+
+.video iframe {
+  width: 100%;
+  max-width: 850px;
+  height: 480px;
+  border-radius: 12px;
+  border: 2px solid #45a29e;
+}
+
+/* ====== AGENTS PAGE ====== */
+
+/* Hero section with blurred background */
+.agents-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.agents-hero img.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(8px) brightness(50%);
+  z-index: 1;
+}
+
+.agents-hero img.front {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  display: block;
+  margin: 0 auto;
+}
+
+.agents-hero .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  color: #fff;
+}
+
+.agents-hero .overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.agents-hero .overlay p {
   font-size: 1.2rem;
   color: #ccc;
 }
 
-/* ===== INTRO ===== */
-.intro {
+/* Agent Role Section */
+.agents-section {
   text-align: center;
-  padding: 40px 20px;
-  font-size: 1.1rem;
-  color: #ccc;
-  background: #111;
+  padding: 60px 10%;
+  background-color: #0b0c10;
 }
 
-/* ===== INFO SECTION ===== */
-.info {
-  padding: 40px;
+.agents-section img {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.role-description {
+  background-color: #111;
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.role-description p {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  line-height: 1.8;
+  color: #c5c6c7;
+}
+
+/* ====== Agent Roles ====== */
+.agent-role {
   display: flex;
-  justify-content: center;
-  background: #000;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10%;
+  color: white;
 }
 
-.info img {
-  max-width: 100%;
+.agent-role img {
+  width: 40%;
   border-radius: 10px;
 }
 
-/* ===== TIPS SECTION ===== */
-.tips {
+.agent-text {
+  width: 55%;
+  text-align: left;
+}
+
+.agent-role:nth-child(odd) {
+  flex-direction: row;
+}
+
+.agent-role:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Role color sections */
+.role-duelist {
+  background-color: #b30000;
+}
+
+.role-controller {
+  background-color: #00004d;
+}
+
+.role-initiator {
+  background-color: #006600;
+}
+
+.role-sentinels {
+  background-color: #333;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: #1f2833;
+  color: #c5c6c7;
   text-align: center;
-  padding: 40px 20px;
-  background: #000;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #45a29e;
 }
 
-.tips-text {
-  background: #ff5555;
-  padding: 15px;
-  border-radius: 8px;
-  color: #000;
-  font-weight: bold;
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .hero-overlay h1,
+  .agents-hero .overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .animation-image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .agent-role {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .agent-text,
+  .agent-role img {
+    width: 100%;
+  }
 }
 
-.video-text {
-  font-style: italic;
-  margin-top: 15px;
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  .hero-overlay h1,
+  .agents-hero .overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
 }
 
-.video {
+/* ====== CHOOSE A ROLE SECTION ====== */
+.choose-role {
+  width: 100%;
+  background-color: #0b0c10;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.choose-role img {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== AGENTS INTRO ====== */
+.agents-intro {
+  background-color: #b30000;
+  color: #fff;
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.agents-intro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.agents-intro p {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* ====== ROLES SECTION (Improved layout) ====== */
+.agent-role {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  gap: 40px;
+}
+
+.agent-role img {
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.agent-text {
+   width: 55%;
+  background: rgba(40, 40, 40, 0.6); /* translucent gray */
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.agent-text h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.agent-text p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #e6e6e6;;
+}
+
+.agent-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+  color: #f5f5f5;
+}
+
+/* Alternating colors */
+.role-duelist {
+  background-color: #b30000;
+}
+
+.role-controller {
+  background-color: #00004d;
+}
+
+.role-initiator {
+  background-color: #006600;
+}
+
+.role-sentinels {
+  background-color: #333;
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px) {
+  .agent-role {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .agent-text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .agent-role img {
+    width: 100%;
+  }
+}
+
+/* ====== IMAGE & GIF HOVER EFFECT ====== */
+img, 
+.video iframe {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover, 
+.video iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 60, 60, 0.7); /* glowing red light */
+}
+
+/* Optional: For different glow colors depending on section */
+.role-duelist img:hover {
+  box-shadow: 0 0 25px rgba(255, 80, 80, 0.8); /* red glow */
+}
+
+.role-controller img:hover {
+  box-shadow: 0 0 25px rgba(80, 80, 255, 0.8); /* blue glow */
+}
+
+.role-initiator img:hover {
+  box-shadow: 0 0 25px rgba(60, 255, 100, 0.8); /* green glow */
+}
+
+.role-sentinels img:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* white glow */
+}
+
+/* Smooth scaling for GIFs or any moving images */
+.role img,
+.gif img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 10px;
+}
+
+/* =========================================
+   MAPS PAGE STYLES (merged from maps.css)
+   ========================================= */
+
+/* ===== HERO SECTION ===== */
+.hero img:first-child {
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  filter: blur(10px) brightness(60%);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero img:last-child {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #c5c6c7;
+}
+
+/* ===== MAP SECTIONS ===== */
+.map-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 10%;
+  overflow: hidden;
+}
+
+.map-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  z-index: 1;
+}
+
+.map-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.map-content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===== MAP IMAGES ===== */
+.map-content img {
+  width: 480px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover glow + scale */
+.map-content img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 80, 80, 0.8);
+}
+
+/* ===== MAP INFO BOX ===== */
+.map-info {
+  background: rgba(25, 25, 25, 0.8);
+  border-radius: 20px;
+  padding: 30px 40px;
+  flex: 1;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.15);
+}
+
+.map-info h2 {
+  color: #ff4d4d;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+.map-info p {
+  color: #ddd;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ===== FOOTER (same as other pages) ===== */
+footer {
+  background-color: #1f2833;
+  color: #c5c6c7;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #45a29e;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1000px) {
+  .map-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .map-info {
+    text-align: center;
+  }
+
+  .map-content img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .map-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .map-info p {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   GUNS PAGE STYLES (ADDED)
+   ========================================= */
+
+/* --- Hero Section --- */
+.guns-hero {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  margin-top: 70px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.guns-hero img.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(15px) brightness(60%);
+  transform: scale(1.1);
+}
+
+.guns-hero img.front {
+  position: absolute;
+  width: 80%;
+  max-width: 1100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+.guns-hero .overlay {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.guns-hero .overlay h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px cyan;
+}
+
+.guns-hero .overlay p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* --- Weapon Overview Section --- */
+.weapon-overview {
+  text-align: center;
+  padding: 60px 10%;
+  background: radial-gradient(circle at top, #0d0d0d, #000);
+  color: white;
+}
+
+.weapon-overview .weapon-image img {
+  width: 90%;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.weapon-quote p {
+  font-size: 1.5rem;
+  color: #ff4655;
+  margin-bottom: 30px;
+}
+
+.weapon-intro p {
+  max-width: 900px;
+  margin: 0 auto 20px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.cta-button {
+  background: #ff4655;
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 70, 85, 0.6);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 70, 85, 1);
+}
+
+/* --- Weapon Section --- */
+.weapon-section {
+  position: relative;
+  color: white;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+}
+
+.weapon-section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 15px cyan;
+}
+
+.weapon-section .weapon-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.weapon-section .weapon-description {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.weapon-section .weapon-description h3 {
+  color: #ff4655;
+  margin-bottom: 5px;
   margin-top: 20px;
 }
 
-.video img, .video iframe {
-  width: 80%;
-  max-width: 700px;
-  border-radius: 10px;
-  border: 3px solid #fff;
-}
-
-/* ===== FOOTER ===== */
-footer {
+.weapon-section .weapon-image-box {
+  flex: 1;
   text-align: center;
-  font-size: 0.9rem;
-  padding: 20px;
-  color: #aaa;
-  background: #111;
-  margin-top: 40px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .nav-links {
-    gap: 15px;
-    font-size: 0.9rem;
-  }
-
-  .hero-overlay h1 {
-    font-size: 2rem;
-  }
-
-  .video img, .video iframe {
-    width: 95%;
-  }
+.weapon-section .weapon-image-box img {
+  width: 90%;
+  max-width: 480px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 480px) {
-  .navbar {
+/* Hover glow */
+.weapon-section .weapon-image-box img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+}
+
+/* Background GIF layer */
+.weapon-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.35;
+}
+
+.weapon-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+}
+
+.weapon-section:nth-child(even) .weapon-info {
+  flex-direction: row-reverse;
+}
+
+/* --- Responsive for Guns Page --- */
+@media (max-width: 900px) {
+  .guns-hero .overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .weapon-section .weapon-info {
     flex-direction: column;
-    padding: 10px 20px;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  .weapon-section .weapon-image-box img {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   ENHANCED GUNS PAGE STYLING
+   ========================================= */
+
+/* --- Background GIF container per section --- */
+.weapon-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(6px) brightness(50%);
+  z-index: -2;
+  opacity: 0.35;
+}
+
+/* 🎯 Example: Replace URLs below with your own GIF paths */
+.pistols::before {
+  background-image: url("gif/pistols-bg.gif"); /* <-- put your pistols gif here */
+}
+.smgs::before {
+  background-image: url("gif/smg-bg.gif"); /* <-- put your SMG gif here */
+}
+.shotguns::before {
+  background-image: url("gif/shotgun-bg.gif"); /* <-- put your shotgun gif here */
+}
+.rifles::before {
+  background-image: url("gif/rifle-bg.gif"); /* <-- put your rifle gif here */
+}
+.snipers::before {
+  background-image: url("gif/sniper-bg.gif"); /* <-- put your sniper gif here */
+}
+.machineguns::before {
+  background-image: url("gif/machinegun-bg.gif"); /* <-- put your machine gun gif here */
+}
+
+/* --- Gray rounded rectangle behind text --- */
+.weapon-description {
+  position: relative;
+  background: rgba(40, 40, 40, 0.75);
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Make sure headings and paragraphs are spaced nicely */
+.weapon-description h3 {
+  color: #ff4655;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+
+.weapon-description p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #e5e5e5;
+}
+
+/* Align text & image horizontally in a clean row */
+.weapon-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: nowrap;
+}
+
+/* Reverse layout for alternating sections */
+.weapon-section:nth-child(even) .weapon-info {
+  flex-direction: row-reverse;
+}
+
+/* Keep weapon image centered and aligned */
+.weapon-image-box {
+  flex: 1;
+  text-align: center;
+}
+
+.weapon-image-box img {
+  width: 80%;
+  max-width: 480px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover glow on weapon images */
+.weapon-image-box img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 70, 85, 0.8);
+}
+
+/* Responsive fixes */
+@media (max-width: 900px) {
+  .weapon-info {
+    flex-direction: column;
   }
 
-  .hero-overlay h1 {
-    font-size: 1.5rem;
+  .weapon-description {
+    width: 100%;
+    text-align: center;
   }
 
-  .hero-overlay p {
+  .weapon-image-box img {
+    width: 100%;
+  }
+}
+
+/* ===== GUNS PAGE STYLE ===== */
+
+.gun-hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.gun-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("gif/guns-hero.gif") center/cover no-repeat;
+  filter: blur(6px) brightness(0.5);
+  z-index: 1;
+}
+
+.gun-hero .overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.gun-hero h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.gun-hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* ===== Weapon Overview ===== */
+.weapon-overview {
+  background-color: #0a0a0a;
+  text-align: center;
+  padding: 80px 10%;
+  color: white;
+}
+
+.weapon-overview img {
+  width: 60%;
+  margin-bottom: 30px;
+}
+
+.weapon-quote p {
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.weapon-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: darkred;
+}
+
+/* ===== Gun Sections ===== */
+.gun-type {
+  position: relative;
+  padding: 100px 5%;
+  color: white;
+  overflow: hidden;
+}
+
+.gun-type::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.4) blur(3px);
+  z-index: 0;
+}
+
+/* Backgrounds per weapon type */
+.pistols::before { background-image: url("gif/pistol-bg.gif"); }
+.smgs::before { background-image: url("gif/smg-bg.gif"); }
+.shotguns::before { background-image: url("gif/shotgun-bg.gif"); }
+.rifles::before { background-image: url("gif/assault-rifle-bg.gif"); }
+.snipers::before { background-image: url("gif/sniper-rifle-bg.gif"); }
+.machineguns::before { background-image: url("gif/machine-gun-bg.gif"); }
+
+.gun-type > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Title Rectangle + Underline */
+.gun-type h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: white;
+  margin-bottom: 60px;
+  font-weight: 700;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 60px;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.gun-type h2::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: red;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Layouts ===== */
+.weapon-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.weapon-info.reverse {
+  flex-direction: row-reverse;
+}
+
+.weapon-image-box {
+  flex: 1;
+  text-align: right;
+}
+
+.weapon-image-box.lefttt{
+  text-align: left;
+  flex: 1;
+}
+
+.weapon-image-box img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weapon-image-box img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 50, 50, 0.6);
+}
+
+.weapon-description {
+  flex: 1;
+  max-width: 500px;
+}
+
+.text-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  line-height: 1.6;
+}
+
+/* =========================================
+   TIPS & STRATEGIES PAGE STYLES
+   ========================================= */
+
+/* ===== HERO SECTION ===== */
+.tips-hero {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.tips-hero img.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px) brightness(60%);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.tips-hero img.front {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.tips-hero .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  color: #fff;
+}
+
+.tips-hero .overlay h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.tips-hero .overlay p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* ===== INTRO SECTION ===== */
+.tips-intro {
+  text-align: center;
+  background-color: #0b0c10;
+  color: #ff4d4d;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  line-height: 1.8;
+  box-shadow: 0 0 20px rgba(255, 70, 85, 0.2);
+}
+
+/* ===== GENERIC TIPS SECTION ===== */
+.tips-section {
+  position: relative;
+  padding: 100px 10%;
+  overflow: hidden;
+  color: white;
+  background-color: #0b0c10;
+}
+
+.tips-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  border-radius: 15px;
+  background: rgba(30, 30, 30, 0.85);
+  box-shadow: 0 0 15px rgba(255, 70, 85, 0.3);
+}
+
+/* Underline */
+.tips-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 3px;
+  background: #ff4655;
+  border-radius: 2px;
+}
+
+/* ===== Background Image/GIF ===== */
+.tips-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.25;
+}
+
+.tips-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px) brightness(60%);
+}
+
+/* ===== CONTENT FLEX LAYOUT ===== */
+.tips-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: nowrap;
+}
+
+.tips-text {
+  flex: 1;
+  background: rgba(30, 30, 30, 0.8);
+  padding: 30px 35px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 70, 85, 0.15);
+  line-height: 1.7;
+}
+
+.tips-text p {
+  color: #e5e5e5;
+  margin-bottom: 15px;
+}
+
+.tips-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #e5e5e5;
+  font-size: 1rem;
+}
+
+.tips-video,
+.tips-image {
+  flex: 1;
+  text-align: center;
+}
+
+.tips-video iframe,
+.tips-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 70, 85, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tips-video iframe:hover,
+.tips-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(255, 70, 85, 0.7);
+}
+
+/* ===== SECTION BACKGROUNDS (Optional Custom GIFs) ===== */
+.beginner-tips .tips-bg img { background-image: url("gif/beginner-bg.gif"); }
+.advanced-strategies .tips-bg img { background-image: url("gif/advanced-bg.gif"); }
+.agent-synergies .tips-bg img { background-image: url("gif/synergy-bg.gif"); }
+.map-control .tips-bg img { background-image: url("gif/map-bg.gif"); }
+.rank-up .tips-bg img { background-image: url("gif/rank-bg.gif"); }
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1000px) {
+  .tips-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .tips-video iframe,
+  .tips-image img {
+    width: 90%;
+  }
+
+  .tips-text {
+    text-align: left;
+    width: 100%;
+  }
+
+  .tips-hero .overlay h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tips-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .tips-intro {
     font-size: 1rem;
+    padding: 15px 20px;
   }
 
-  .intro {
-    font-size: 1rem;
+  .tips-content {
+    gap: 20px;
+  }
+
+  .tips-text {
+    padding: 20px;
+  }
+
+  .tips-video iframe {
+    height: 250px;
+  }
+}
+
+/* ===== PRINT PREVIEW STYLES ===== */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  header, footer, .nav-toggle, .mobile-menu {
+    display: none;
+  }
+
+  .tips-section {
+    page-break-after: always;
+    color: black;
+    background: white;
+    box-shadow: none;
+  }
+
+  .tips-section h2 {
+    color: black;
+    text-shadow: none;
+    border: none;
+  }
+
+  .tips-text {
+    background: none;
+    box-shadow: none;
+  }
+
+  .tips-video iframe,
+  .tips-image img {
+    display: none;
   }
 }

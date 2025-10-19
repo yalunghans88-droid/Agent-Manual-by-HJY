@@ -3,124 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agents Manual | Agents</title>
-  <link rel="stylesheet" href="agents.css" />
+  <title>Agents Manual | Valorant</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="logo">
-      <img src="images/logo.png" alt="Agents Manual Logo" class="logo-icon">
+      <!-- Agents Manual logo -->
+      <img src="img/logo.png" alt="Agents Manual Logo" class="logo-icon" />
       <span>Agents Manual</span>
     </div>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="agents.html" class="active">Agents</a></li>
-        <li><a href="maps.html">Maps</a></li>
-        <li><a href="guns.html">Guns</a></li>
-        <li><a href="tips.html">Tips & Strategies</a></li>
-      </ul>
+    <nav class="nav-links">
+      <a href="home.html" >Home</a>
+      <a href="agents.html" class="active">Agents</a>
+      <a href="maps.html">Maps</a>
+      <a href="guns.html">Guns</a>
+      <a href="tips.html">Tips & Strategies</a>
     </nav>
   </header>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero">
-    <div class="hero-image">
-      <!-- 🖼️ Background hero image -->
-      <img src="images/agents-hero.jpg" alt="Valorant Agents Banner">
-    </div>
-    <div class="hero-text">
+  <!-- ====== HERO SECTION ====== -->
+  <section class="agents-hero">
+    <img src="img/agents-hero.jpg" class="bg" alt="blurred background">
+    <img src="img/agents-hero.jpg" class="front" alt="main agent">
+    <div class="overlay">
       <h1>Agents</h1>
       <p>Know your role</p>
     </div>
   </section>
 
-  <!-- ===== CHOOSE A ROLE ===== -->
+  <!-- ====== CHOOSE A ROLE SECTION ====== -->
   <section class="choose-role">
-    <img src="images/choose-role.jpg" alt="Choose a Role Banner"> 
+    <img src="img/choose-role.png" alt="Choose a Role">
   </section>
 
-  <!-- ===== INTRO TEXT ===== -->
-  <section class="intro">
+  <!-- ====== INTRO SECTION ====== -->
+  <section class="agents-intro">
     <h2>Agent Roles in Valorant: Master the Meta</h2>
     <p>
-      Valorant agents are grouped into four core roles, each defined by unique
-      responsibilities and designed to create balanced team compositions.
-      Here's how each role functions:
+      Valorant’s agents are grouped into four primary roles. Each role is designed to enhance team coordination and strategy. 
+      Understanding each role helps players maximize their potential and adapt effectively in matches.
     </p>
   </section>
 
-  <!-- ===== ROLES SECTION ===== -->
-  <section class="roles">
-
-    <!-- Duelist -->
-    <div class="role duelist">
-      <div class="role-text">
-        <h3>Duelist</h3>
-        <p><strong>The Aggressive Scorers</strong><br>
-        Role: Self-reliant fraggers who lead offensives, securing openings for their team.<br>
-        Playstyle: Fast-paced and high-risk.<br>
-        Notables: Jett, Phoenix, Neon, Raze, Reyna, Yoru, Iso.</p>
-      </div>
-      <div class="role-image">
-        <img src="images/duelist.jpg" alt="Duelist Image">
-      </div>
+  <!-- ====== DUELIST SECTION ====== -->
+  <section class="agent-role role-duelist">
+    <div class="agent-text">
+      <h3>Duelist</h3>
+      <p>
+        Duelists specialize in aggressive play and are the front-liners in every engagement. 
+        Their self-sufficient combat skills make them ideal for leading attacks and securing kills.
+      </p>
+      <ul>
+        <li>Agents: Jett, Phoenix, Reyna, Raze, Yoru, Iso</li>
+      </ul>
     </div>
-
-    <!-- Controller -->
-    <div class="role controller">
-      <div class="role-image">
-        <img src="images/controller.jpg" alt="Controller Image">
-      </div>
-      <div class="role-text">
-        <h3>Controller</h3>
-        <p><strong>The Strategic Enforcers</strong><br>
-        Role: Manipulate battlefield control by blocking vision, shaping space, and dictating engagements.<br>
-        Playstyle: Tactical and map-centric.<br>
-        Notables: Brimstone, Omen, Viper, Astra, Harbor, Clove.</p>
-      </div>
-    </div>
-
-    <!-- Initiator -->
-    <div class="role initiator">
-      <div class="role-text">
-        <h3>Initiator</h3>
-        <p><strong>The Entry Enablers</strong><br>
-        Role: Break enemy positions, gather intel, and facilitate entry for teammates.<br>
-        Playstyle: Disruptive and support-focused.<br>
-        Notables: Sova, Breach, Skye, KAY/O, Fade, Gekko.</p>
-      </div>
-      <div class="role-image">
-        <img src="images/initiator.jpg" alt="Initiator Image">
-      </div>
-    </div>
-
-    <!-- Sentinel -->
-    <div class="role sentinel">
-      <div class="role-image">
-        <img src="images/sentinel.jpg" alt="Sentinel Image"> 
-      </div>
-      <div class="role-text">
-        <h3>Sentinels</h3>
-        <p><strong>The Defensive Anchors</strong><br>
-        Role: Hold ground, fortify sites, and offer team support through healing or revives.<br>
-        Playstyle: Defensive and protection-centric.<br>
-        Notables: Sage, Cypher, Killjoy, Chamber, Deadlock, Vyse.</p>
-      </div>
-    </div>
-
+    <img src="gif/duelist.gif" alt="Duelist Agent">
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="footer-image">
-      <img src="images/footer-bg.jpg" alt="Footer Banner">
+  <!-- ====== CONTROLLER SECTION ====== -->
+  <section class="agent-role role-controller">
+    <div class="agent-text">
+      <h3>Controller</h3>
+      <p>
+        Controllers are experts in map control. They provide cover, block vision, 
+        and manipulate the battlefield to help their team advance strategically.
+      </p>
+      <ul>
+        <li>Agents: Omen, Brimstone, Viper, Astra, Harbor, Clove</li>
+      </ul>
     </div>
-    <p>© Copyright 2025. All rights reserved. Created by Hans Jeremy Yalung</p>
-  </footer>
+    <img src="gif/controller.gif" alt="Controller Agent">
+  </section>
 
-  <script src="agents.js"></script>
+  <!-- ====== INITIATOR SECTION ====== -->
+  <section class="agent-role role-initiator">
+    <div class="agent-text">
+      <h3>Initiator</h3>
+      <p>
+        Initiators open paths for their teams. They disrupt enemy defenses, gather intel, 
+        and initiate attacks through crowd control or reconnaissance abilities.
+      </p>
+      <ul>
+        <li>Agents: Sova, Breach, KAY/O, Skye, Fade, Gekko</li>
+      </ul>
+    </div>
+    <img src="gif/initiator.gif" alt="Initiator Agent">
+  </section>
+
+  <!-- ====== SENTINELS SECTION ====== -->
+  <section class="agent-role role-sentinels">
+    <div class="agent-text">
+      <h3>Sentinels</h3>
+      <p>
+        Sentinels are defensive anchors. They excel at locking down areas, protecting teammates, 
+        and providing intel to maintain map control and prevent flanks.
+      </p>
+      <ul>
+        <li>Agents: Sage, Killjoy, Cypher, Chamber, Deadlock</li>
+      </ul>
+    </div>
+    <img src="gif/sentinel.gif" alt="Sentinel Agent">
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>©Copyright 2025. All rights reserved. Created by Hans Jeremy Yalung</p>
+  </footer>
 </body>
 </html>
