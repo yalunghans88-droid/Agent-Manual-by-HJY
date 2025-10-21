@@ -8,20 +8,29 @@
 </head>
 
 <body>
-  <!-- ===== NAVIGATION BAR ===== -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="img/logo.png" alt="Agents Manual Logo" class="logo-icon" />
-      <span>Agents Manual</span>
-    </div>
-    <nav class="nav-links">
-      <a href="home.html">Home</a>
-      <a href="agents.html">Agents</a>
-      <a href="maps.html">Maps</a>
-      <a href="guns.html" class="active">Guns</a>
-      <a href="tips.html">Tips & Strategies</a>
-    </nav>
-  </header>
+  <!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="logo">
+    <img src="img/logo.png" alt="Agents Manual Logo" class="logo-icon" />
+    <span>Agents Manual</span>
+  </div>
+
+  <!-- BURGER MENU ICON (Mobile only) -->
+  <div class="burger" id="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- NAVIGATION LINKS -->
+  <nav class="nav-links" id="nav-links">
+    <a href="home.html">Home</a>
+    <a href="agents.html">Agents</a>
+    <a href="maps.html">Maps</a>
+    <a href="guns.html">Guns</a>
+    <a href="tips.html">Tips & Strategies</a>
+  </nav>
+</header>
 
   <!-- ===== HERO SECTION ===== -->
   <section class="agents-hero">
@@ -59,43 +68,68 @@
   <!-- ===== PISTOLS ===== -->
   <section class="gun-type pistols">
     <h2>Pistols</h2>
-    <div class="weapon-info">
-      <div class="weapon-description">
-        <div class="text-box">
+    <div class="weapon-grid">
+      <div class="weapon-card">
+        <img src="img/classic.png" alt="Classic">
+        <div class="weapon-info-box">
           <h3>Classic</h3>
           <p>The free sidearm. Versatile with a primary fire for precision and burst-fire alternate for close combat.</p>
+        </div>
+      </div>
 
+      <div class="weapon-card">
+        <img src="img/frenzy.png" alt="Frenzy">
+        <div class="weapon-info-box">
           <h3>Frenzy</h3>
           <p>A pistol with high fire rate and short range — deadly when rushing tight spaces.</p>
+        </div>
+      </div>
 
+      <div class="weapon-card">
+        <img src="img/ghost.png" alt="Ghost">
+        <div class="weapon-info-box">
           <h3>Ghost</h3>
           <p>Silenced and accurate. A go-to pick for eco rounds and long-range pistol duels.</p>
+        </div>
+      </div>
 
+      <div class="weapon-card">
+        <img src="img/sheriff.png" alt="Sheriff">
+        <div class="weapon-info-box">
           <h3>Sheriff</h3>
           <p>High damage and powerful recoil. Perfect for players who trust their headshots.</p>
         </div>
       </div>
-      <div class="weapon-image-box">
-        <img src="img/pistols.png" alt="Pistol Collection" />
+
+      <div class="weapon-card">
+        <img src="img/shorty.png" alt="Shorty">
+        <div class="weapon-info-box">
+          <h3>Sheriff</h3>
+          <p>A pocket shotgun that dominates at point-blank range. Extremely cheap but limited by low ammo and range. </p>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ===== SMGs ===== -->
+  <!-- ===== SMGS ===== -->
   <section class="gun-type smgs">
     <h2>SMGs</h2>
-    <div class="weapon-info reverse">
-      <div class="weapon-description">
-        <div class="text-box">
+    <div class="weapon-grid">
+      <div class="weapon-card">
+        <img src="img/stinger.png" alt="Stinger">
+        <div class="weapon-info-box">
           <h3>Stinger</h3>
           <p>Fast and fierce. Great for close-quarters combat.</p>
+        </div>
+      </div>
 
+      <div class="weapon-card">
+        <img src="img/specter.png" alt="Spectre">
+        <div class="weapon-info-box">
           <h3>Spectre</h3>
           <p>Silenced, mobile, and reliable — ideal for eco rounds and mid-range engagements.</p>
         </div>
-      </div>
-      <div class="weapon-image-box lefttt">
-        <img src="img/smg.png" alt="SMG Collection" />
       </div>
     </div>
   </section>
@@ -103,62 +137,82 @@
   <!-- ===== SHOTGUNS ===== -->
   <section class="gun-type shotguns">
     <h2>Shotguns</h2>
-    <div class="weapon-info">
-      <div class="weapon-description">
-        <div class="text-box">
+    <div class="weapon-grid">
+      <div class="weapon-card">
+        <img src="img/bucky.png" alt="Bucky">
+        <div class="weapon-info-box">
           <h3>Bucky</h3>
           <p>Close-range beast. Devastating power but limited reach.</p>
+        </div>
+      </div>
 
+      <div class="weapon-card">
+        <img src="img/judge.png" alt="Judge">
+        <div class="weapon-info-box">
           <h3>Judge</h3>
           <p>Fully automatic shotgun with brutal firepower for rushes and choke points.</p>
         </div>
       </div>
-      <div class="weapon-image-box">
-        <img src="img/shotgun.png" alt="Shotgun Collection" />
-      </div>
     </div>
   </section>
 
-  <!-- ===== ASSAULT RIFLES ===== -->
+  <!-- ===== RIFLES ===== -->
   <section class="gun-type rifles">
     <h2>Assault Rifles</h2>
-    <div class="weapon-info reverse">
-      <div class="weapon-description">
-        <div class="text-box">
+    <div class="weapon-grid">
+      <div class="weapon-card">
+        <img src="img/bulldog.jpg" alt="Bulldog">
+        <div class="weapon-info-box">
           <h3>Bulldog</h3>
           <p>Versatile and cost-effective rifle. Great for players on a budget.</p>
+        </div>
+      </div>
 
+      <div class="weapon-card">
+        <img src="img/guardian.png" alt="Guardian">
+        <div class="weapon-info-box">
           <h3>Guardian</h3>
           <p>Precise and powerful single-shot rifle for patient marksmen.</p>
+        </div>
+      </div>
 
+      <div class="weapon-card">
+        <img src="img/phantom.png" alt="Phantom">
+        <div class="weapon-info-box">
           <h3>Phantom</h3>
           <p>Silenced, accurate, and deadly at short to mid-range.</p>
         </div>
       </div>
-      <div class="weapon-image-box lefttt">
-        <img src="img/assault-rifle.png" alt="Rifle Collection" />
+
+      <div class="weapon-card">
+        <img src="img/vandal.png" alt="Vandal">
+        <div class="weapon-info-box">
+          <h3>Phantom</h3>
+          <p>The rival to the Phantom. Fully automatic with no damage fall-off - one headshot is lethal at any distance.</p>
+        </div>
       </div>
+
     </div>
   </section>
 
   <!-- ===== SNIPERS ===== -->
   <section class="gun-type snipers">
     <h2>Sniper Rifles</h2>
-    <div class="weapon-info">
-      <div class="weapon-description">
-        <div class="text-box">
+    <div class="weapon-grid">
+      <div class="weapon-card">
+        <img src="img/marshall.png" alt="Marshal">
+        <div class="weapon-info-box">
           <h3>Marshal</h3>
           <p>Light sniper. One-shot headshots for skilled aimers.</p>
+        </div>
+      </div>
 
-          <h3>Outlaw</h3>
-          <p>Balanced and quick-scoping mid-tier sniper rifle.</p>
-
+      <div class="weapon-card">
+        <img src="img/operator.jpg" alt="Operator">
+        <div class="weapon-info-box">
           <h3>Operator</h3>
           <p>The most powerful rifle in Valorant. One body shot, one kill.</p>
         </div>
-      </div>
-      <div class="weapon-image-box">
-        <img src="img/sniper-rifle.png" alt="Sniper Collection" />
       </div>
     </div>
   </section>
@@ -166,18 +220,21 @@
   <!-- ===== MACHINE GUNS ===== -->
   <section class="gun-type machineguns">
     <h2>Machine Guns</h2>
-    <div class="weapon-info reverse">
-      <div class="weapon-description">
-        <div class="text-box">
+    <div class="weapon-grid">
+      <div class="weapon-card">
+        <img src="img/ares.png" alt="Ares">
+        <div class="weapon-info-box">
           <h3>Ares</h3>
           <p>The cheaper LMG, offering solid suppressive fire and high magazine capacity.</p>
+        </div>
+      </div>
 
+      <div class="weapon-card">
+        <img src="img/odin.jpg" alt="Odin">
+        <div class="weapon-info-box">
           <h3>Odin</h3>
           <p>The heavy powerhouse. Massive fire rate and damage, perfect for locking down sites.</p>
         </div>
-      </div>
-      <div class="weapon-image-box lefttt">
-        <img src="img/machine-gun.png" alt="Machine Gun Collection" />
       </div>
     </div>
   </section>
@@ -186,5 +243,7 @@
   <footer>
     <p>©Copyright 2025. All rights reserved. Created by Hans Jeremy Yalung</p>
   </footer>
+  <script src="script.js"></script>
+
 </body>
 </html>

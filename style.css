@@ -312,56 +312,7 @@ footer {
   border-top: 1px solid #45a29e;
 }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 900px) {
-  .navbar {
-    padding: 0 25px;
-  }
 
-  .hero-overlay h1,
-  .agents-hero .overlay h1 {
-    font-size: 2.2rem;
-  }
-
-  .animation-image {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .video iframe {
-    width: 100%;
-    height: 300px;
-  }
-
-  .agent-role {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .agent-text,
-  .agent-role img {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .nav-links {
-    gap: 20px;
-  }
-
-  .nav-links a {
-    font-size: 0.95rem;
-  }
-
-  .hero-overlay h1,
-  .agents-hero .overlay h1 {
-    font-size: 1.8rem;
-  }
-
-  .intro p {
-    font-size: 1rem;
-  }
-}
 
 /* ====== CHOOSE A ROLE SECTION ====== */
 .choose-role {
@@ -415,7 +366,7 @@ footer {
 
 .agent-text {
    width: 55%;
-  background: rgba(40, 40, 40, 0.6); /* translucent gray */
+  background: rgba(40, 40, 40, 0.6); 
   padding: 25px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -457,22 +408,124 @@ footer {
   background-color: #333;
 }
 
-/* Mobile adjustments */
-@media (max-width: 900px) {
+
+
+/* Tablet adjustments (below 1000px) */
+@media (max-width: 1000px) {
+  .agents-hero {
+    height: 60vh;
+  }
+
+  .agents-hero img.front {
+    object-fit: contain;
+    height: 100%;
+  }
+
+  .agents-hero .overlay h1 {
+    font-size: 2.4rem;
+  }
+
+  .agents-hero .overlay p {
+    font-size: 1rem;
+  }
+
+  /* Agent role sections */
   .agent-role {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
+    padding: 50px 8%;
   }
 
   .agent-text {
     width: 100%;
+    padding: 25px 20px;
     text-align: left;
+    background: rgba(20, 20, 20, 0.7);
+  }
+
+  .agent-role img {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .agent-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .agent-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .agent-text ul {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile adjustments (below 600px) */
+@media (max-width: 600px) {
+  .agents-hero {
+    height: 50vh;
+  }
+
+  .agents-hero img.bg {
+    filter: blur(5px) brightness(50%);
+  }
+
+  .agents-hero .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .agents-hero .overlay p {
+    font-size: 0.9rem;
+  }
+
+  .agents-intro {
+    padding: 40px 5%;
+  }
+
+  .agents-intro h2 {
+    font-size: 1.4rem;
+  }
+
+  .agents-intro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Role sections */
+  .agent-role {
+    padding: 40px 6%;
+    gap: 25px;
+  }
+
+  .agent-text {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .agent-text h3 {
+    font-size: 1.6rem;
+  }
+
+  .agent-text p {
+    font-size: 0.95rem;
   }
 
   .agent-role img {
     width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px 0;
   }
 }
+
 
 /* ====== IMAGE & GIF HOVER EFFECT ====== */
 img, 
@@ -483,10 +536,9 @@ img,
 img:hover, 
 .video iframe:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 60, 60, 0.7); /* glowing red light */
+  box-shadow: 0 0 25px rgba(255, 60, 60, 0.7); 
 }
 
-/* Optional: For different glow colors depending on section */
 .role-duelist img:hover {
   box-shadow: 0 0 25px rgba(255, 80, 80, 0.8); /* red glow */
 }
@@ -509,10 +561,6 @@ img:hover,
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   border-radius: 10px;
 }
-
-/* =========================================
-   MAPS PAGE STYLES (merged from maps.css)
-   ========================================= */
 
 /* ===== HERO SECTION ===== */
 .hero img:first-child {
@@ -571,6 +619,7 @@ img:hover,
   background-position: center;
   opacity: 0.25;
   z-index: 1;
+  align-items: center;
 }
 
 .map-content {
@@ -662,7 +711,7 @@ footer {
 }
 
 /* =========================================
-   GUNS PAGE STYLES (ADDED)
+   GUNS PAGE STYLES 
    ========================================= */
 
 /* --- Hero Section --- */
@@ -855,9 +904,6 @@ footer {
   }
 }
 
-/* =========================================
-   ENHANCED GUNS PAGE STYLING
-   ========================================= */
 
 /* --- Background GIF container per section --- */
 .weapon-section::before {
@@ -875,24 +921,24 @@ footer {
   opacity: 0.35;
 }
 
-/* 🎯 Example: Replace URLs below with your own GIF paths */
+
 .pistols::before {
-  background-image: url("gif/pistols-bg.gif"); /* <-- put your pistols gif here */
+  background-image: url("gif/pistols-bg.gif"); 
 }
 .smgs::before {
-  background-image: url("gif/smg-bg.gif"); /* <-- put your SMG gif here */
+  background-image: url("gif/smg-bg.gif"); 
 }
 .shotguns::before {
-  background-image: url("gif/shotgun-bg.gif"); /* <-- put your shotgun gif here */
+  background-image: url("gif/shotgun-bg.gif");
 }
 .rifles::before {
-  background-image: url("gif/rifle-bg.gif"); /* <-- put your rifle gif here */
+  background-image: url("gif/rifle-bg.gif"); 
 }
 .snipers::before {
-  background-image: url("gif/sniper-bg.gif"); /* <-- put your sniper gif here */
+  background-image: url("gif/sniper-bg.gif"); 
 }
 .machineguns::before {
-  background-image: url("gif/machinegun-bg.gif"); /* <-- put your machine gun gif here */
+  background-image: url("gif/machinegun-bg.gif"); 
 }
 
 /* --- Gray rounded rectangle behind text --- */
@@ -907,7 +953,6 @@ footer {
   min-width: 320px;
 }
 
-/* Make sure headings and paragraphs are spaced nicely */
 .weapon-description h3 {
   color: #ff4655;
   margin-bottom: 8px;
@@ -1086,11 +1131,11 @@ footer {
 /* Title Rectangle + Underline */
 .gun-type h2 {
   text-align: center;
+  align-items: center;
   font-size: 2.8rem;
   color: white;
   margin-bottom: 60px;
   font-weight: 700;
-  display: inline-block;
   background: rgba(255, 255, 255, 0.15);
   padding: 15px 60px;
   border-radius: 30px;
@@ -1156,6 +1201,63 @@ footer {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
   line-height: 1.6;
 }
+/* ===== INDIVIDUAL GUN INFO BOXES ===== */
+.weapon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 40px;
+}
+
+.weapon-card {
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weapon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 70, 85, 0.5);
+}
+
+.weapon-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.weapon-info-box h3 {
+  color: #ff4655;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.weapon-info-box p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .weapon-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .weapon-card {
+    max-width: 100%;
+  }
+}
+
 
 /* =========================================
    TIPS & STRATEGIES PAGE STYLES
@@ -1333,7 +1435,7 @@ footer {
   box-shadow: 0 0 40px rgba(255, 70, 85, 0.7);
 }
 
-/* ===== SECTION BACKGROUNDS (Optional Custom GIFs) ===== */
+/* ===== SECTION BACKGROUNDS ===== */
 .beginner-tips .tips-bg img { background-image: url("gif/beginner-bg.gif"); }
 .advanced-strategies .tips-bg img { background-image: url("gif/advanced-bg.gif"); }
 .agent-synergies .tips-bg img { background-image: url("gif/synergy-bg.gif"); }
@@ -1420,3 +1522,445 @@ footer {
     display: none;
   }
 }
+
+/* =========================================
+   MOBILE BURGER MENU
+   ========================================= */
+
+/* Hide the default nav-links on small screens */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    background-color: rgba(26, 0, 0, 0.95);
+    border-left: 2px solid #ff2b2b;
+    box-shadow: -2px 4px 10px rgba(255, 0, 0, 0.3);
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: slideIn 0.3s ease forwards;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Burger icon */
+  .burger {
+    display: block;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /* Transform burger to X when active */
+  .burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .burger.toggle .line2 {
+    opacity: 0;
+  }
+  .burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Hide burger on large screens */
+.burger {
+  display: none;
+}
+
+/* =========================================
+   FINAL AGENTS PAGE MOBILE FIX
+   ========================================= */
+
+body {
+  overflow-x: hidden;
+}
+
+/* Tablet (below 1000px) */
+@media (max-width: 1000px) {
+  .agents-hero {
+    height: 60vh;
+  }
+
+  .agents-hero img.bg {
+    filter: blur(8px) brightness(50%);
+  }
+
+  .agents-hero img.front {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .agents-hero .overlay h1 {
+    font-size: 2.4rem;
+  }
+
+  .agents-hero .overlay p {
+    font-size: 1rem;
+  }
+
+  /* Fix for role sections */
+  .agent-role {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 5%;
+    text-align: center;
+  }
+
+  .agent-text {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    background: rgba(25, 25, 25, 0.8);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  .agent-text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .agent-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .agent-text ul {
+    font-size: 0.95rem;
+    padding-left: 18px;
+  }
+
+  .agent-role img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+/* Mobile (below 600px) */
+@media (max-width: 600px) {
+  .agents-hero {
+    height: 50vh;
+  }
+
+  .agents-hero img.front {
+    width: 100%;
+    height: auto;
+  }
+
+  .agents-hero .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .agents-hero .overlay p {
+    font-size: 0.9rem;
+  }
+
+  .agents-intro {
+    padding: 30px 6%;
+  }
+
+  .agents-intro h2 {
+    font-size: 1.3rem;
+  }
+
+  .agents-intro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Role sections: ensure stacked, even spacing */
+  .agent-role {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 6%;
+    gap: 20px;
+  }
+
+  .agent-text {
+    width: 100%;
+    background: rgba(25, 25, 25, 0.85);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .agent-role img {
+    width: 85%;
+    max-width: 350px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px 0;
+  }
+}
+
+/* Safety: Prevent image overflow on small screens */
+.agent-role img,
+.agents-hero img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================
+   PERFECT MOBILE LAYOUT FIX FOR AGENTS PAGE
+   ========================================= */
+@media (max-width: 600px) {
+  /* Container per role */
+  .agent-role {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    padding: 40px 5%;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+
+  /* 1️⃣ Title box (full width, stands out) */
+  .agent-text h3 {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 12px 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+
+  /* 2️⃣ Center the GIF cleanly */
+  .agent-role img {
+    width: 90%;
+    max-width: 340px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  /* 3️⃣ Info box neatly below the GIF */
+  .agent-text {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(25, 25, 25, 0.9);
+    color: #e5e5e5;
+    border-radius: 12px;
+    padding: 20px 25px;
+    text-align: left;
+    line-height: 1.6;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .agent-text p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .agent-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.95rem;
+  }
+
+  /* Space between each role section */
+  .agent-role + .agent-role {
+    margin-top: 50px;
+  }
+
+  /* Prevent horizontal scroll issues */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Role background colors for clarity */
+  .role-duelist {
+    background-color: #b30000;
+  }
+
+  .role-controller {
+    background-color: #00004d;
+  }
+
+  .role-initiator {
+    background-color: #004d00;
+  }
+
+  .role-sentinels {
+    background-color: #333333;
+  }
+}
+
+/* =========================================
+   MOBILE BURGER MENU (RESPONSIVE NAV)
+   ========================================= */
+
+/* Hide burger by default (desktop) */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Mobile navigation menu hidden initially */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ----- MOBILE VIEW ----- */
+@media (max-width: 900px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px; /* below navbar */
+    right: 0;
+    width: 100%;
+    background: #1a0000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 25px 0;
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    border-bottom: 2px solid #ff2b2b;
+  }
+
+  /* Show nav when active */
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Animate burger to X */
+  .burger.toggle .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .burger.toggle .line:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.toggle .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .nav-links a:hover {
+    background-color: #ff2b2b;
+  }
+}
+
+/* ===== AGENTS PAGE — MOBILE FIX LAYOUT ===== */
+@media (max-width: 900px) {
+  .agent-role {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 40px 5%;
+    gap: 20px;
+  }
+
+  /* Title first, then gif, then text */
+  .agent-role h3 {
+    order: 1;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 25px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  .agent-role img {
+    order: 2;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .agent-text {
+    order: 3;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: left;
+  }
+
+  /* Prevent rightward scrolling */
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  /* Add spacing between roles */
+  .agent-role + .agent-role {
+    margin-top: 30px;
+  }
+}
+

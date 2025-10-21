@@ -8,26 +8,34 @@
 </head>
 
 <body>
-  <!-- ===== NAVIGATION BAR ===== -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="img/logo.png" alt="Agents Manual Logo" class="logo-icon" />
-      <span>Agents Manual</span>
-    </div>
-    <nav class="nav-links">
-      <a href="home.html">Home</a>
-      <a href="agents.html">Agents</a>
-      <a href="maps.html">Maps</a>
-      <a href="guns.html">Guns</a>
-      <a href="tips.html" class="active">Tips & Strategies</a>
-    </nav>
-  </header>
+  <!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="logo">
+    <img src="img/logo.png" alt="Agents Manual Logo" class="logo-icon" />
+    <span>Agents Manual</span>
+  </div>
+
+  <!-- BURGER MENU ICON (Mobile only) -->
+  <div class="burger" id="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- NAVIGATION LINKS -->
+  <nav class="nav-links" id="nav-links">
+    <a href="home.html">Home</a>
+    <a href="agents.html">Agents</a>
+    <a href="maps.html">Maps</a>
+    <a href="guns.html">Guns</a>
+    <a href="tips.html">Tips & Strategies</a>
+  </nav>
+</header>
 
   <!-- ===== HERO SECTION ===== -->
   <section class="tips-hero">
-    <!-- ▼ Replace with your hero background image -->
-    <img src="img/tips-hero-bg.png" alt="Valorant Tips Hero" class="bg" />
-    <img src="img/tips-hero-bg.png" alt="Valorant Tips Overlay" class="front" />
+    <img src="img/jettip-bg.jpg" alt="Valorant Tips Hero" class="bg" />
+    <img src="img/jettip-bg.jpg" alt="Valorant Tips Overlay" class="front" />
     <div class="overlay">
       <h1>Tips & Strategies</h1>
       <p>Know your capabilities</p>
@@ -43,7 +51,6 @@
 
   <!-- ===== BEGINNER TIPS ===== -->
   <section class="tips-section beginner-tips">
-    <!-- ▼ Background image or gif -->
     <div class="tips-bg">
       <img src="img/beginner-bg.gif" alt="Beginner Tips Background" />
     </div>
@@ -61,7 +68,6 @@
       </div>
 
       <div class="tips-video">
-        <!-- ▼ Replace with YouTube embed -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/niQTsITVvhQ?si=L8om3OtsbRRbGssO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
@@ -69,7 +75,6 @@
 
   <!-- ===== ADVANCED STRATEGIES ===== -->
   <section class="tips-section advanced-strategies">
-    <!-- ▼ Background image or gif -->
     <div class="tips-bg">
       <img src="img/advanced-bg.gif" alt="Advanced Strategies Background" />
     </div>
@@ -77,7 +82,6 @@
     <h2>Advanced Strategies</h2>
     <div class="tips-content">
       <div class="tips-video">
-        <!-- ▼ Replace with YouTube embed -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/ziyeysrIUWU?si=mCJSLrlR-erYCisG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
@@ -95,7 +99,6 @@
 
   <!-- ===== AGENT SYNERGIES ===== -->
   <section class="tips-section agent-synergies">
-    <!-- ▼ Background image -->
     <div class="tips-bg">
       <img src="gif/synergy-bg.jpg" alt="Agent Synergies Background" />
     </div>
@@ -111,7 +114,6 @@
         </ul>
       </div>
       <div class="tips-image">
-        <!-- ▼ Replace with synergy-related image -->
         <img src="img/synergy.png" alt="Agent Synergy Image" />
       </div>
     </div>
@@ -119,7 +121,6 @@
 
   <!-- ===== MAP CONTROL ===== -->
   <section class="tips-section map-control">
-    <!-- ▼ Background image or gif -->
     <div class="tips-bg">
       <img src="img/map-control.gif" alt="Map Control Background" />
     </div>
@@ -127,7 +128,6 @@
     <h2>Map Control</h2>
     <div class="tips-content">
       <div class="tips-video">
-        <!-- ▼ Replace with YouTube embed -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/ziyeysrIUWU?si=YQPRWVjf7jazqJRX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
@@ -145,7 +145,6 @@
 
   <!-- ===== RANK UP FAST ===== -->
   <section class="tips-section rank-up">
-    <!-- ▼ Background image -->
     <div class="tips-bg">
       <img src="img/rank-bg.jpg" alt="Rank Up Background" />
     </div>
@@ -161,7 +160,6 @@
         </ul>
       </div>
       <div class="tips-image">
-        <!-- ▼ Replace with Rank victory image -->
         <img src="img/rank-up.png" alt="Rank Up Fast Image" />
       </div>
     </div>
@@ -171,6 +169,7 @@
   <footer>
     <p>©Copyright 2025. All rights reserved. Created by Hans Jeremy Yalung</p>
   </footer>
+<script src="script.js"></script>
 
 </body>
 </html>

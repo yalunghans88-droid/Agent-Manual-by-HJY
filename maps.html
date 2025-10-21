@@ -10,20 +10,28 @@
 <body>
 
   <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <div class="logo">
-      <!-- Agents Manual logo -->
-      <img src="img/logo.png" alt="Agents Manual Logo" class="logo-icon" />
-      <span>Agents Manual</span>
-    </div>
-    <nav class="nav-links">
-      <a href="home.html" >Home</a>
-      <a href="agents.html">Agents</a>
-      <a href="maps.html" class="active">Maps</a>
-      <a href="guns.html">Guns</a>
-      <a href="tips.html">Tips & Strategies</a>
-    </nav>
-  </header>
+<header class="navbar">
+  <div class="logo">
+    <img src="img/logo.png" alt="Agents Manual Logo" class="logo-icon" />
+    <span>Agents Manual</span>
+  </div>
+
+  <!-- BURGER MENU ICON (Mobile only) -->
+  <div class="burger" id="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- NAVIGATION LINKS -->
+  <nav class="nav-links" id="nav-links">
+    <a href="home.html">Home</a>
+    <a href="agents.html">Agents</a>
+    <a href="maps.html">Maps</a>
+    <a href="guns.html">Guns</a>
+    <a href="tips.html">Tips & Strategies</a>
+  </nav>
+</header>
 
   <!-- ===== HERO SECTION ===== -->
   <section class="agents-hero">
@@ -53,7 +61,7 @@
   <!-- ===== BIND ===== -->
   <section class="map-section bind">
     <div class="map-bg" style="background-image: url('gif/bind-bg.gif');"></div> <!--  Bind background -->
-    <div class="map-content reverse">
+    <div class="map-content">
       <img src="img/bind.png" alt="Bind Map"> <!--  Main Bind map image -->
       <div class="map-info">
         <h2>Bind</h2>
@@ -77,7 +85,7 @@
   <!-- ===== ICEBOX ===== -->
   <section class="map-section icebox">
     <div class="map-bg" style="background-image: url('gif/icebox-bg.gif');"></div> <!--  Icebox background -->
-    <div class="map-content reverse">
+    <div class="map-content">
       <img src="img/icebox.jpg" alt="Icebox Map"> <!--  Main Icebox map image -->
       <div class="map-info">
         <h2>Icebox</h2>
@@ -101,7 +109,7 @@
   <!-- ===== SUNSET ===== -->
   <section class="map-section sunset">
     <div class="map-bg" style="background-image: url('gif/sunset-bg.gif');"></div> <!--  Sunset background -->
-    <div class="map-content reverse">
+    <div class="map-content">
       <img src="img/sunset.png" alt="Sunset Map"> <!--  Main Sunset map image -->
       <div class="map-info">
         <h2>Sunset</h2>
@@ -116,5 +124,7 @@
   </footer>
 
   <script src="maps.js"></script>
+  <script src="script.js"></script>
+
 </body>
 </html>

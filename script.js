@@ -7,3 +7,12 @@ window.addEventListener("scroll", function() {
     navbar.style.background = "#0b0b0b";
   }
 });
+
+// ===== MOBILE BURGER MENU =====
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  burger.classList.toggle('toggle');
+});
